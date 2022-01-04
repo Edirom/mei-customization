@@ -1,26 +1,41 @@
 package de.edirom.meigarage.mei;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
-class MEICustomizationTest {
+public class MEICustomizationTest {
 
-    @org.junit.jupiter.api.Test
-    void error() {
+    MEICustomization instance;
+
+    @Before
+    public void setUp() throws Exception {
+        instance = new MEICustomization();
     }
 
-    @org.junit.jupiter.api.Test
-    void fatalError() {
+    @After
+    public void tearDown() throws Exception {
     }
 
-    @org.junit.jupiter.api.Test
-    void warning() {
+    @Test
+    public void error() {
     }
 
-    @org.junit.jupiter.api.Test
-    void customize() {
+    @Test
+    public void fatalError() {
     }
 
-    @org.junit.jupiter.api.Test
-    void getSupportedCustomizationSettings() {
+    @Test
+    public void warning() {
+    }
+
+    @Test
+    public void customize() {
+    }
+
+    @Test
+    public void getSupportedCustomizationSettings() throws Exception{
+        assertNotNull(instance.getSupportedCustomizationSettings());
     }
 }
