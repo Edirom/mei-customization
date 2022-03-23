@@ -9,6 +9,7 @@ VERSION_MEILER=latest
 MEI_SOURCES_HOME=/usr/share/xml/mei
 TEI_SOURCES_HOME=/usr/share/xml/tei
 
+sudo apt-get update
 sudo apt-get install libxml2-utils
 
 #https://github.com/TEIC/Stylesheets/releases/latest
