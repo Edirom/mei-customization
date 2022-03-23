@@ -36,8 +36,8 @@ public class MEICustomizationTest {
     public void customize() throws IOException, EGEException {
         OutputStream os = new FileOutputStream("src/test/resources/test-output.odd");
         String outputFormat = "Compiled ODD";
-        CustomizationSourceInputType sourceInputType = new CustomizationSourceInputType("mei401","MEI v4.0.1", "type_server-file", "source/mei-source_canon.xml");
-        CustomizationSourceInputType customizationInputType = new CustomizationSourceInputType("mei401","MEI v4.0.1", "type_server-file", "source/mei-source_canon.xml");
+        CustomizationSourceInputType sourceInputType = new CustomizationSourceInputType("mei401","MEI v4.0.1", "type_server-file", "source/mei-source_canonicalized.xml");
+        CustomizationSourceInputType customizationInputType = new CustomizationSourceInputType("mei401","MEI v4.0.1", "type_server-file", "source/mei-source_canonicalized.xml");
         List<CustomizationSourceInputType> sources = new ArrayList<>();
         sources.add(sourceInputType);
         List<CustomizationSourceInputType> customizations = new ArrayList<>();
