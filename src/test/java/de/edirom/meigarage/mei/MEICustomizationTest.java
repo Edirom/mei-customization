@@ -36,14 +36,15 @@ public class MEICustomizationTest {
     public void customize() throws IOException, EGEException {
         OutputStream os = new FileOutputStream("src/test/resources/test-output.odd");
         String outputFormat = "Compiled ODD";
-        CustomizationSourceInputType sourceInputType = new CustomizationSourceInputType("mei401","MEI v4.0.1", "type_server-file", "source/mei-source_canonicalized.xml");
+        //String outputFormat = "RelaxNG";
         CustomizationSourceInputType customizationInputType = new CustomizationSourceInputType("mei401","MEI v4.0.1", "type_server-file", "source/mei-source_canonicalized.xml");
+        CustomizationSourceInputType sourceInputType = new CustomizationSourceInputType("mei401","MEI v4.0.1", "type_server-file", "source/mei-source_canonicalized.xml");
+        //CustomizationSourceInputType sourceInputType = new CustomizationSourceInputType("meidev","MEI dev", "type_server-file", "source/mei-source_canonicalized.xml");
+        //CustomizationSourceInputType customizationInputType = new CustomizationSourceInputType("meidev","MEI dev", "type_server-file", "source/mei-source_canonicalized.xml");
         List<CustomizationSourceInputType> sources = new ArrayList<>();
         sources.add(sourceInputType);
         List<CustomizationSourceInputType> customizations = new ArrayList<>();
         customizations.add(customizationInputType);
-        List<String> outputFormats = new ArrayList<>();
-        outputFormats.add(outputFormat);
         String tempDir = "src/test/temp";
         customization.customize(null, sourceInputType, customizationInputType, outputFormat, os, null, null, tempDir);
         assertNotNull(new File("src/test/resources/test-output.odd"));

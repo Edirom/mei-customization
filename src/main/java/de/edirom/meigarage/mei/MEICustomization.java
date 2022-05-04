@@ -41,6 +41,7 @@ public class MEICustomization implements Customization, ErrorHandler {
         List<CustomizationSourceInputType> customizations = new ArrayList<CustomizationSourceInputType>();
         List<String> outputFormats = new ArrayList<String>();
 
+        sources.add(new CustomizationSourceInputType("meidev", "MEI dev", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
         sources.add(new CustomizationSourceInputType("mei401", "MEI v4.0.1", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
         sources.add(new CustomizationSourceInputType("mei300", "MEI v3.0.0", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
         sources.add(new CustomizationSourceInputType("mei211", "MEI v2.1.1", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
