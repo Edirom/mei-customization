@@ -35,17 +35,17 @@ public class MEICustomization implements Customization, ErrorHandler {
     private static final String MEI_DIR = "/usr/share/xml/mei/music-encoding";
 
     static {
-        TEI_DIR = EGEConstants.TEIROOT + "stylesheet" ;
+        TEI_DIR = EGEConstants.TEIROOT + "stylesheet";
 
         List<CustomizationSourceInputType> sources = new ArrayList<CustomizationSourceInputType>();
         List<CustomizationSourceInputType> customizations = new ArrayList<CustomizationSourceInputType>();
         List<String> outputFormats = new ArrayList<String>();
 
-        sources.add(new CustomizationSourceInputType("meidev", "MEI dev", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canon.xml"));
-        sources.add(new CustomizationSourceInputType("mei401", "MEI v4.0.1", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canon.xml"));
-        sources.add(new CustomizationSourceInputType("mei300", "MEI v3.0.0", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canon.xml"));
-        sources.add(new CustomizationSourceInputType("mei211", "MEI v2.1.1", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canon.xml"));
-        sources.add(new CustomizationSourceInputType("mei200", "MEI v2.0.0", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canon.xml"));
+        sources.add(new CustomizationSourceInputType("meidev", "MEI dev", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
+        sources.add(new CustomizationSourceInputType("mei401", "MEI v4.0.1", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
+        sources.add(new CustomizationSourceInputType("mei300", "MEI v3.0.0", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
+        sources.add(new CustomizationSourceInputType("mei211", "MEI v2.1.1", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
+        sources.add(new CustomizationSourceInputType("mei200", "MEI v2.0.0", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
         sources.add(new CustomizationSourceInputType("mei-local", "Local Source", CustomizationSourceInputType.TYPE_CLIENT_FILE));
 
         customizations.add(new CustomizationSourceInputType("c-mei-all", "MEI All", CustomizationSourceInputType.TYPE_SERVER_FILE, "customizations/mei-all.xml"));
@@ -82,20 +82,28 @@ public class MEICustomization implements Customization, ErrorHandler {
     public void customize(CustomizationSetting customizationSetting, CustomizationSourceInputType sourceInputType,
                           CustomizationSourceInputType customizationInputType, String outputFormat,
                           OutputStream outputStream, File localSourceFile, File localCustomizationFile) throws EGEException {
+        customize(customizationSetting, sourceInputType, customizationInputType, outputFormat,
+                outputStream, localSourceFile, localCustomizationFile, null);
 
-        File outTempDir = prepareTempDir();
+    }
+
+    public void customize(CustomizationSetting customizationSetting, CustomizationSourceInputType sourceInputType,
+                          CustomizationSourceInputType customizationInputType, String outputFormat,
+                          OutputStream outputStream, File localSourceFile, File localCustomizationFile, String tempDir) throws EGEException {
+
+        File outTempDir = prepareTempDir(tempDir);
 
         String sourcePath = "";
-        if(sourceInputType.getType().equals(CustomizationSourceInputType.TYPE_CLIENT_FILE)) {
+        if (sourceInputType.getType().equals(CustomizationSourceInputType.TYPE_CLIENT_FILE)) {
 
             sourcePath = localSourceFile.getAbsolutePath();
-        }else
+        } else
             sourcePath = MEI_DIR + File.separator + sourceInputType.getId() + File.separator + sourceInputType.getPath();
 
         String customizationPath = "";
-        if(customizationInputType.getType().equals(CustomizationSourceInputType.TYPE_CLIENT_FILE)) {
+        if (customizationInputType.getType().equals(CustomizationSourceInputType.TYPE_CLIENT_FILE)) {
             customizationPath = localCustomizationFile.getAbsolutePath();
-        }else
+        } else
             customizationPath = MEI_DIR + File.separator + sourceInputType.getId() + File.separator + customizationInputType.getPath();
 
 
@@ -127,24 +135,24 @@ public class MEICustomization implements Customization, ErrorHandler {
             File sourceFile = prepareSourceFile(sourcePath, outTempDir);
 */
 
-            if(outputFormat.equals("RelaxNG")) {
+            if (outputFormat.equals("RelaxNG")) {
                 // Expand ODD
                 LOGGER.debug("expand odd: " + customizationPath + " through " + TEI_DIR + "/odds/odd2odd.xsl" +
                         " with source " + sourcePath +
-                        " -> " + outTempDir.getAbsolutePath() + File.separator +  "processedodd.xml");
+                        " -> " + outTempDir.getAbsolutePath() + File.separator + "processedodd.xml");
 
                 File processedOddFile = expandODD(customizationPath, outTempDir, sourcePath);
 
                 // Build RelaxNG
                 LOGGER.debug("generate rng: " + processedOddFile.getAbsolutePath() + " through " + TEI_DIR + "/odds/odd2relax.xsl" +
                         " with source " + sourcePath +
-                        " -> " + outTempDir.getAbsolutePath() + File.separator +  customizationName + ".rng");
+                        " -> " + outTempDir.getAbsolutePath() + File.separator + customizationName + ".rng");
 
                 File relaxNGFile = transformToRelaxNG(processedOddFile, outTempDir, customizationName, sourcePath);
 
                 is = new FileInputStream(relaxNGFile);
 
-            }else if(outputFormat.equals("Compiled ODD")) {
+            } else if (outputFormat.equals("Compiled ODD")) {
                 // Expand ODD
                 LOGGER.debug("expand odd: " + customizationPath + " through " + TEI_DIR + "/odds/odd2odd.xsl" +
                         " with source " + sourcePath +
@@ -161,7 +169,7 @@ public class MEICustomization implements Customization, ErrorHandler {
                 outputStream.write(buf, 0, c);
             }
 
-        }catch (Exception e) {
+        } catch (Exception e) {
             throw new EGEException(e.getMessage());
         } finally {
             try {
@@ -240,7 +248,7 @@ public class MEICustomization implements Customization, ErrorHandler {
 
         transformer.setSource(new StreamSource(processedOddFile));
 
-        File relaxNGFile = new File(outTempDir.getAbsolutePath() + File.separator +  customizationName + ".rng");
+        File relaxNGFile = new File(outTempDir.getAbsolutePath() + File.separator + customizationName + ".rng");
         Serializer relaxNGSerializer = proc.newSerializer(relaxNGFile);
         transformer.setDestination(relaxNGSerializer);
 
@@ -265,7 +273,7 @@ public class MEICustomization implements Customization, ErrorHandler {
         File inputFile = new File(customizationPath);
         transformer.setSource(new StreamSource(inputFile));
 
-        File processedOddFile = new File(outTempDir.getAbsolutePath() + File.separator +  "processedodd.xml");
+        File processedOddFile = new File(outTempDir.getAbsolutePath() + File.separator + "processedodd.xml");
         Serializer processedOddSerializer = proc.newSerializer(processedOddFile);
         transformer.setDestination(processedOddSerializer);
 
@@ -276,12 +284,20 @@ public class MEICustomization implements Customization, ErrorHandler {
     }
 
     private File prepareTempDir() {
+        return prepareTempDir(null);
+    }
+
+    private File prepareTempDir(String tempDir) {
         File inTempDir = null;
         String uid = UUID.randomUUID().toString();
-        inTempDir = new File(EGEConstants.TEMP_PATH + File.separator + uid
-                + File.separator);
+        if (tempDir != null) {
+            inTempDir = new File(tempDir + File.separator + uid
+                    + File.separator);
+        } else {
+            inTempDir = new File(EGEConstants.TEMP_PATH + File.separator + uid
+                    + File.separator);
+        }
         inTempDir.mkdir();
-        LOGGER.info("Temp dir created: " + inTempDir.getAbsolutePath());
         return inTempDir;
     }
 
