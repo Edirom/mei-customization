@@ -55,6 +55,11 @@ mkdir -p  ${MEI_SOURCES_HOME}/music-encoding/mei401
 cp -r /tmp/mei401/*/*  ${MEI_SOURCES_HOME}/music-encoding/mei401
 rm -r /tmp/mei401
 xmllint -xinclude ${MEI_SOURCES_HOME}/music-encoding/mei401/source/mei-source.xml -o ${MEI_SOURCES_HOME}/music-encoding/mei401/source/mei-source_canonicalized.xml
-mkdir -p  ${MEI_SOURCES_HOME}/music-stylesheets/meidev
-git clone -b develop https://github.com/music-encoding/music-encoding ${MEI_SOURCES_HOME}/music-encoding/meidev 
-xmllint -xinclude ${MEI_SOURCES_HOME}/music-encoding/meidev/source/mei-source.xml -o ${MEI_SOURCES_HOME}/music-encoding/meidev/source/mei-source_canonicalized.xml
+mkdir -p  ${MEI_SOURCES_HOME}/music-encoding/meidev
+git clone --depth 1 https://github.com/music-encoding/schema /tmp/meidev 
+cd /tmp/meidev
+git rev-parse HEAD > dev/GITHASH
+cp -r /tmp/meidev/dev ${MEI_SOURCES_HOME}/music-encoding/meidev
+mkdir -p  ${MEI_SOURCES_HOME}/music-encoding/meidev/source
+mv ${MEI_SOURCES_HOME}/music-encoding/meidev/mei-source_canonicalized.xml ${MEI_SOURCES_HOME}/music-encoding/meidev/source/mei-source_canonicalized.xml
+rm -r /tmp/meidev
