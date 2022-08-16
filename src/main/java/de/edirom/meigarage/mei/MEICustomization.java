@@ -1,7 +1,9 @@
 package de.edirom.meigarage.mei;
 
 import net.sf.saxon.s9api.*;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
 import org.tei.utils.SaxonProcFactory;
 import org.tei.utils.XMLUtils;
 import org.w3c.dom.Document;
@@ -27,7 +29,7 @@ import java.util.UUID;
 public class MEICustomization implements Customization, ErrorHandler {
 
 
-    private static final Logger LOGGER = Logger.getLogger(MEICustomization.class);
+    private static final Logger LOGGER = LogManager.getLogger(MEICustomization.class);
 
     private static final CustomizationSetting cs;
 
