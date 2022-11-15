@@ -101,7 +101,7 @@
         <dependency>
             <groupId>org.tei</groupId>
             <artifactId>tei-javalib</artifactId>
-            <version>0.6</version>
+            <version>0.6.1</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
