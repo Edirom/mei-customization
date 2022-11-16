@@ -61,5 +61,5 @@ cd /tmp/meidev
 git rev-parse HEAD > dev/GITHASH
 cp -r /tmp/meidev/dev ${MEI_SOURCES_HOME}/music-encoding/meidev
 mkdir -p  ${MEI_SOURCES_HOME}/music-encoding/meidev/source
-mv ${MEI_SOURCES_HOME}/music-encoding/meidev/mei-source_canonicalized.xml ${MEI_SOURCES_HOME}/music-encoding/meidev/source/mei-source_canonicalized.xml
+curl -s -L -o ${MEI_SOURCES_HOME}/music-encoding/meidev/source/mei-source_canonicalized.xml https://raw.githubusercontent.com/music-encoding/schema/main/dev/mei-source_canonicalized.xml
 rm -r /tmp/meidev
