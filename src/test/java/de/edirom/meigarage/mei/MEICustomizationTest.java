@@ -34,22 +34,24 @@ public class MEICustomizationTest {
 
     @org.junit.Test
     public void customize() throws IOException, EGEException {
-        OutputStream os = new FileOutputStream("src/test/resources/test-output.odd");
-        String outputFormat = "Compiled ODD";
-        //String outputFormat = "RelaxNG";
-        CustomizationSourceInputType customizationInputType = new CustomizationSourceInputType("mei401","MEI v4.0.1", "type_server-file", "source/mei-source_canonicalized.xml");
-        CustomizationSourceInputType sourceInputType = new CustomizationSourceInputType("mei401","MEI v4.0.1", "type_server-file", "source/mei-source_canonicalized.xml");
+        OutputStream os = new FileOutputStream("src/test/resources/test-output.rng");
+        //String outputFormat = "Compiled ODD";
+        String outputFormat = "RelaxNG";
+        //CustomizationSourceInputType customizationInputType = new CustomizationSourceInputType("mei401","MEI v4.0.1", "type_server-file", "source/mei-source_canonicalized.xml");
+        //CustomizationSourceInputType sourceInputType = new CustomizationSourceInputType("mei401","MEI v4.0.1", "type_server-file", "source/mei-source_canonicalized.xml");
         //CustomizationSourceInputType sourceInputType = new CustomizationSourceInputType("meidev","MEI dev", "type_server-file", "source/mei-source_canonicalized.xml");
         //CustomizationSourceInputType customizationInputType = new CustomizationSourceInputType("meidev","MEI dev", "type_server-file", "source/mei-source_canonicalized.xml");
+        CustomizationSourceInputType sourceInputType = new CustomizationSourceInputType("mei300","MEI 3.0.0", "type_server-file", "source/mei-source_canonicalized.xml");
+        CustomizationSourceInputType customizationInputType = new CustomizationSourceInputType("mei300","MEI 3.0.0", "type_server-file", "source/mei-source_canonicalized.xml");
         List<CustomizationSourceInputType> sources = new ArrayList<>();
         sources.add(sourceInputType);
         List<CustomizationSourceInputType> customizations = new ArrayList<>();
         customizations.add(customizationInputType);
         String tempDir = "src/test/temp";
         customization.customize(null, sourceInputType, customizationInputType, outputFormat, os, null, null, tempDir);
-        assertNotNull(new File("src/test/resources/test-output.odd"));
+        assertNotNull(new File("src/test/resources/test-output.rng"));
         //System.out.println(new String(Files.readAllBytes(Paths.get("src/test/resources/test-output.odd")), "UTF-8"));
-        assertNotEquals("", new String(Files.readAllBytes(Paths.get("src/test/resources/test-output.odd")), "UTF-8"));
+        assertNotEquals("", new String(Files.readAllBytes(Paths.get("src/test/resources/test-output.rng")), "UTF-8"));
         os.close();
     }
 
