@@ -11,7 +11,7 @@
 
     <groupId>de.edirom.meigarage</groupId>
     <artifactId>mei-customization</artifactId>
-    <version>0.6.3</version>
+    <version>0.7.0</version>
     <properties>
 
         <project.build.sourceEncoding>
@@ -92,11 +92,6 @@
             <artifactId>ege-framework</artifactId>
             <version>0.5.1</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.sf.saxon</groupId>
-            <artifactId>Saxon-HE</artifactId>
-            <version>9.8.0-7</version>
         </dependency>
         <dependency>
             <groupId>org.tei</groupId>

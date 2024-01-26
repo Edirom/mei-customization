@@ -44,6 +44,7 @@ public class MEICustomization implements Customization, ErrorHandler {
         List<String> outputFormats = new ArrayList<String>();
 
         sources.add(new CustomizationSourceInputType("meidev", "MEI dev", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
+        sources.add(new CustomizationSourceInputType("mei500", "MEI v5.0", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
         sources.add(new CustomizationSourceInputType("mei401", "MEI v4.0.1", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
         sources.add(new CustomizationSourceInputType("mei300", "MEI v3.0.0", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
         sources.add(new CustomizationSourceInputType("mei211", "MEI v2.1.1", CustomizationSourceInputType.TYPE_SERVER_FILE, "source/mei-source_canonicalized.xml"));
@@ -240,10 +241,11 @@ public class MEICustomization implements Customization, ErrorHandler {
 
     private File transformToRelaxNG(File processedOddFile, File outTempDir, String customizationName, String sourcePath) throws FileNotFoundException, SaxonApiException {
         Processor proc = SaxonProcFactory.getProcessor();
+
         XsltCompiler comp = proc.newXsltCompiler();
 
-        StreamSource xslt = new StreamSource(new FileInputStream(new File(
-                TEI_DIR + "/odds/odd2relax.xsl")));
+        StreamSource xslt = new StreamSource(new FileInputStream(
+                TEI_DIR + "/odds/odd2relax.xsl"));
         xslt.setSystemId(TEI_DIR + "/odds/odd2relax.xsl");
         XsltExecutable exec = comp.compile(xslt);
         XsltTransformer transformer = exec.load();
