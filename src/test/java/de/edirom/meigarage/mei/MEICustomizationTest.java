@@ -52,6 +52,13 @@ public class MEICustomizationTest {
         assertNotNull(new File("src/test/resources/test-output.rng"));
         //System.out.println(new String(Files.readAllBytes(Paths.get("src/test/resources/test-output.odd")), "UTF-8"));
         assertNotEquals("", new String(Files.readAllBytes(Paths.get("src/test/resources/test-output.rng")), "UTF-8"));
+        //Always differs:
+        // <!--
+        //Schema generated from ODD source 2024-04-10T09:12:30Z. .
+        //--><!---->
+        assertEquals("The files differ!",
+                new String(Files.readAllBytes(Paths.get("src/test/resources/test-output.rng"))).replaceAll("<!--[\\s\\S]*?-->",""),
+                new String(Files.readAllBytes(Paths.get("src/test/resources/expected-output.rng"))).replaceAll("<!--[\\s\\S]*?-->", ""));
         os.close();
     }
 

@@ -17,5 +17,6 @@
 !*.xsd
 !*.yml
 !test-input.*.zip
+!expected-output.rng
 !required.sh
 !*.gitkeep
