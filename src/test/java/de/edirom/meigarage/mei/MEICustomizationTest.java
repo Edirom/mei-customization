@@ -42,7 +42,7 @@ public class MEICustomizationTest {
         //CustomizationSourceInputType sourceInputType = new CustomizationSourceInputType("meidev","MEI dev", "type_server-file", "source/mei-source_canonicalized.xml");
         //CustomizationSourceInputType customizationInputType = new CustomizationSourceInputType("meidev","MEI dev", "type_server-file", "source/mei-source_canonicalized.xml");
         CustomizationSourceInputType sourceInputType = new CustomizationSourceInputType("mei300","MEI 3.0.0", "type_server-file", "source/mei-source_canonicalized.xml");
-        CustomizationSourceInputType customizationInputType = new CustomizationSourceInputType("mei300","MEI 3.0.0", "type_server-file", "source/mei-source_canonicalized.xml");
+        CustomizationSourceInputType customizationInputType = new CustomizationSourceInputType("c-mei-mensural", "MEI Mensural", CustomizationSourceInputType.TYPE_SERVER_FILE, "customizations/mei-Mensural.xml");
         List<CustomizationSourceInputType> sources = new ArrayList<>();
         sources.add(sourceInputType);
         List<CustomizationSourceInputType> customizations = new ArrayList<>();
