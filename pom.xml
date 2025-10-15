@@ -11,7 +11,7 @@
 
     <groupId>de.edirom.meigarage</groupId>
     <artifactId>mei-customization</artifactId>
-    <version>0.7.0</version>
+    <version>1.0.0</version>
     <properties>
 
         <project.build.sourceEncoding>
@@ -90,13 +90,13 @@
         <dependency>
             <groupId>pl.psnc.dl.ege</groupId>
             <artifactId>ege-framework</artifactId>
-            <version>0.5.1</version>
+            <version>0.5.6</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.tei</groupId>
             <artifactId>tei-javalib</artifactId>
-            <version>0.6.1</version>
+            <version>1.2.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>

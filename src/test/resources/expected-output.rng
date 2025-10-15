@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<grammar xmlns:xlink="http://www.w3.org/1999/xlink"
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
          xmlns:tei="http://www.tei-c.org/ns/1.0"
          xmlns:teix="http://www.tei-c.org/ns/Examples"
-         xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.music-encoding.org/ns/mei"><!--
-Schema generated from ODD source 2024-01-26T14:29:34Z. .  
+Schema generated from ODD source 2025-10-15T13:49:00Z. .  
 --><!---->
    <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="tei"
@@ -14,15 +14,15 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
       <element>
          <anyName>
             <except>
-               <nsName ns="http://www.music-encoding.org/ns/mei"/> 
+               <nsName ns="http://www.music-encoding.org/ns/mei"/>
                <nsName ns="http://www.w3.org/2000/svg"/>
             </except>
-         </anyName> 
+         </anyName>
          <zeroOrMore>
             <attribute>
                <anyName/>
             </attribute>
-         </zeroOrMore> 
+         </zeroOrMore>
          <zeroOrMore>
             <choice>
                <text/>
@@ -453,7 +453,7 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    </define>
    <define name="data.DEGREES">
       <data type="decimal">
-         <param name="maxInclusive">360.0</param> 
+         <param name="maxInclusive">360.0</param>
          <param name="minInclusive">-360.0</param>
       </data>
    </define>
@@ -564,7 +564,7 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <define name="data.FINGER.FRET">
       <choice>
          <data type="positiveInteger">
-            <param name="minInclusive">1</param> 
+            <param name="minInclusive">1</param>
             <param name="maxInclusive">4</param>
          </data>
          <data type="token">
@@ -587,7 +587,7 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    </define>
    <define name="data.FONTSIZENUMERIC">
       <data type="token">
-         <param name="pattern">\d*(\.\d+)?(pt)?</param> 
+         <param name="pattern">\d*(\.\d+)?(pt)?</param>
          <except>
             <choice>
                <data type="token">
@@ -724,7 +724,7 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    </define>
    <define name="data.FRET">
       <data type="positiveInteger">
-         <param name="minInclusive">1</param> 
+         <param name="minInclusive">1</param>
          <param name="maxInclusive">5</param>
       </data>
    </define>
@@ -941,7 +941,7 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    </define>
    <define name="data.LINESTARTENDSYMBOLSIZE">
       <data type="positiveInteger">
-         <param name="minInclusive">1</param> 
+         <param name="minInclusive">1</param>
          <param name="maxInclusive">9</param>
       </data>
    </define>
@@ -1449,13 +1449,13 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    </define>
    <define name="data.MODUSMAIOR">
       <data type="positiveInteger">
-         <param name="minInclusive">2</param> 
+         <param name="minInclusive">2</param>
          <param name="maxInclusive">3</param>
       </data>
    </define>
    <define name="data.MODUSMINOR">
       <data type="positiveInteger">
-         <param name="minInclusive">2</param> 
+         <param name="minInclusive">2</param>
          <param name="maxInclusive">3</param>
       </data>
    </define>
@@ -1551,7 +1551,7 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    </define>
    <define name="data.PAGE.PANELS">
       <data type="positiveInteger">
-         <param name="minInclusive">1</param> 
+         <param name="minInclusive">1</param>
          <param name="maxInclusive">2</param>
       </data>
    </define>
@@ -1591,7 +1591,7 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    </define>
    <define name="data.PROLATIO">
       <data type="positiveInteger">
-         <param name="minInclusive">2</param> 
+         <param name="minInclusive">2</param>
          <param name="maxInclusive">3</param>
       </data>
    </define>
@@ -1634,7 +1634,7 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    </define>
    <define name="data.SLASH">
       <data type="positiveInteger">
-         <param name="minInclusive">1</param> 
+         <param name="minInclusive">1</param>
          <param name="maxInclusive">6</param>
       </data>
    </define>
@@ -1738,7 +1738,7 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    </define>
    <define name="data.TEMPUS">
       <data type="positiveInteger">
-         <param name="minInclusive">2</param> 
+         <param name="minInclusive">2</param>
          <param name="maxInclusive">3</param>
       </data>
    </define>
@@ -1939,13 +1939,13 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.accidental.performed-accid.ges-check_accid_duplication-constraint-rule-1">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@accid.ges">
-                <sch:assert role="warning" test="not(. eq ../@accid)">The value of @accid.ges should
+         <sch:assert role="warning" test="not(. eq ../@accid)">The value of @accid.ges should
                   not duplicate the value of @accid.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.agentident.attributes">
       <ref name="att.agentident.attribute.agent"/>
@@ -1972,17 +1972,17 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.alignment-check_whenTarget-constraint-rule-2">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@when">
-            <sch:assert role="warning" test="not(normalize-space(.) eq '')">@when attribute should
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@when attribute should
               have content.</sch:assert>
-            <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:when/@xml:id">A
               value in @when should correspond to the @xml:id attribute of a when
               element.</sch:assert>
-          </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.altsym.attributes">
       <ref name="att.altsym.attribute.altsym"/>
@@ -1998,19 +1998,19 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.altsym-altsym-check_altsymTarget-constraint-rule-3">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@altsym">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@altsym attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@altsym attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:symbolDef/@xml:id">The value in @altsym should correspond to the @xml:id attribute of a symbolDef
                   element.</sch:assert>
-                <sch:assert test="not(substring(., 2) eq ancestor::mei:symbolDef/@xml:id)">The value
+         <sch:assert test="not(substring(., 2) eq ancestor::mei:symbolDef/@xml:id)">The value
                   in @altsym must not correspond to the @xml:id attribute of a symbolDef
                   ancestor.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.annot.anl.attributes">
       <ref name="att.common.anl.attributes"/>
@@ -2139,13 +2139,13 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.augmentdots-dots-dots_attribute_requires_dur-constraint-rule-4">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="mei:*[@dots]">
-                <sch:assert test="@dur">An element with a dots attribute must also have a dur
+         <sch:assert test="@dur">An element with a dots attribute must also have a dur
                   attribute.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.authorized.attributes">
       <ref name="att.authorized.attribute.authority"/>
@@ -2621,16 +2621,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.classcodeident-classcode-check_classcodeTarget-constraint-rule-5">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@classcode">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@classcode attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@classcode attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:classCode/@xml:id">The value in @classcode should correspond to the @xml:id attribute of a classCode
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.clef.anl.attributes">
       <ref name="att.common.anl.attributes"/>
@@ -2814,27 +2814,27 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.common.anl-copyof-When_copyof_element_empty-constraint-rule-6">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="mei:*[@copyof]">
-                <sch:assert test="count(child::node()) = 0">An element with a copyof attribute
+         <sch:assert test="count(child::node()) = 0">An element with a copyof attribute
                   cannot have content.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.common.anl-copyof-check_copyofTarget-constraint-rule-7">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@copyof">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@copyof attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@copyof attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">The value in @copyof should correspond to the @xml:id attribute of an
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.common.anl.attribute.corresp">
       <optional>
@@ -2851,16 +2851,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.common.anl-corresp-check_correspTarget-constraint-rule-8">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@corresp">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@corresp attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@corresp attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each value in @corresp should correspond to the @xml:id attribute of an
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.common.anl.attribute.next">
       <optional>
@@ -2877,16 +2877,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.common.anl-next-check_nextTarget-constraint-rule-9">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@next">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@next attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@next attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each value in @next should correspond to the @xml:id attribute of an
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.common.anl.attribute.prev">
       <optional>
@@ -2903,16 +2903,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.common.anl-prev-check_prevTarget-constraint-rule-10">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@prev">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@prev attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@prev attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each value in @prev should correspond to the @xml:id attribute of an
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.common.anl.attribute.sameas">
       <optional>
@@ -2929,16 +2929,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.common.anl-sameas-check_sameasTarget-constraint-rule-11">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@sameas">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@sameas attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@sameas attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each value in @sameas should correspond to the @xml:id attribute of an
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.common.anl.attribute.synch">
       <optional>
@@ -2955,16 +2955,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.common.anl-synch-check_synchTarget-constraint-rule-12">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@synch">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@synch attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@synch attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each value in @synch should correspond to the @xml:id attribute of an
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.controlevent.attributes">
       <ref name="att.plist.attributes"/>
@@ -3140,16 +3140,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.custos.log-target-check_custosTarget-constraint-rule-13">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="mei:custos/@target">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@target attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@target attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:note/@xml:id">The value in @target should correspond to the @xml:id attribute of a note
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.custos.vis.attributes">
       <ref name="att.altsym.attributes"/>
@@ -3237,16 +3237,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.datapointing-data-check_dataTarget-constraint-rule-14">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@data">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@data attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@data attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[ancestor::mei:music]/@xml:id">The value in @data should correspond to the @xml:id attribute of a descendant of
                   the music element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.declaring.attributes">
       <ref name="att.declaring.attribute.decls"/>
@@ -3266,16 +3266,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.declaring-decls-check_declsTarget-constraint-rule-15">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@decls">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@decls attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@decls attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[ancestor::mei:meiHead]/@xml:id">Each value in @decls should correspond to the @xml:id attribute of an element
                   within the metadata header.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.dimensions.attributes">
       <ref name="att.height.attributes"/>
@@ -3386,13 +3386,13 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.duration.additive-dur-ignore_dots_attribute-constraint-rule-16">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="mei:*[contains(@dur, '.')]">
-                <sch:assert test="not(@dots)">An element with a dur attribute that contains dotted
+         <sch:assert test="not(@dots)">An element with a dur attribute that contains dotted
                   values must not have a dots attribute.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.duration.default.attributes">
       <ref name="att.duration.default.attribute.dur.default"/>
@@ -3608,13 +3608,13 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.extsym-glyphname-check_glyphnameTarget-constraint-rule-17">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@glyphname">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@glyphname attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@glyphname attribute
                   should have content.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.extsym.attribute.glyphnum">
       <optional>
@@ -3629,13 +3629,13 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.extsym-glyphnum-check_glyphnum-constraint-rule-18">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="mei:*[starts-with(@glyphnum, 'U+')]">
-                <sch:assert role="warning" test="string-length(@glyphnum) = 6">SMuFL version 1.18
+         <sch:assert role="warning" test="string-length(@glyphnum) = 6">SMuFL version 1.18
                   uses the range U+E000 - U+ECBF.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.f.anl.attributes">
       <ref name="att.common.anl.attributes"/>
@@ -3675,16 +3675,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.facsimile-facs-check_facsTarget-constraint-rule-19">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@facs">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@facs attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@facs attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[local-name() eq 'surface' or local-name() eq 'zone']/@xml:id">Each value in @facs should correspond to the @xml:id attribute of a surface or
                   zone element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.fermata.anl.attributes">
       <ref name="att.common.anl.attributes"/>
@@ -4022,16 +4022,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.handident-hand-check_handTarget-constraint-rule-20">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@hand">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@hand attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@hand attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:hand/@xml:id">Each value in @hand should correspond to the @xml:id attribute of a hand
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.harm.anl.attributes">
       <ref name="att.common.anl.attributes"/>
@@ -4059,16 +4059,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.harm.log-chordref-check_chordrefTarget-constraint-rule-21">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@chordref">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@chordref attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@chordref attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:chordDef/@xml:id">The value in @chordref should correspond to the @xml:id attribute of a chordDef
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.harm.vis.attributes">
       <ref name="att.extender.attributes"/>
@@ -4330,16 +4330,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.instrumentident-instr-check_instrTarget-constraint-rule-22">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@instr">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@instr attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@instr attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:instrDef/@xml:id">The value in @instr should correspond to the @xml:id attribute of an instrDef
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.internetmedia.attributes">
       <ref name="att.internetmedia.attribute.mimetype"/>
@@ -4396,16 +4396,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.joined-join-check_joinTarget-constraint-rule-23">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@join">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@join attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@join attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each value in @join should correspond to the @xml:id attribute of an
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.keyAccid.anl.attributes">
       <ref name="att.common.anl.attributes"/>
@@ -4601,16 +4601,16 @@ Schema generated from ODD source 2024-01-26T14:29:34Z. .
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.layer.log-def-check_defTarget_layer-constraint-rule-24">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="mei:layer/@def">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@def attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@def attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:layerDef/@xml:id">The value in @def should correspond to the @xml:id attribute of a layerDef
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.layer.vis.attributes">
       <ref name="att.visibility.attributes"/>
@@ -5765,16 +5765,16 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] in; 5] issue; 6] mm; 7] pa
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.name-nymref-check_nymrefTarget-constraint-rule-25">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@nymref">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@nymref attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@nymref attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">The value in @nymref should correspond to the @xml:id attribute of an
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.name.attribute.role">
       <optional>
@@ -5827,13 +5827,13 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] in; 5] issue; 6] mm; 7] pa
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.notationtype-notationsubtype-When_notationsubtype-constraint-rule-26">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="mei:*[@notationsubtype]">
-                <sch:assert test="@notationtype">An element with a notationsubtype attribute must
+         <sch:assert test="@notationtype">An element with a notationsubtype attribute must
                   have a notationtype attribute.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.note.anl.attributes">
       <ref name="att.common.anl.attributes"/>
@@ -6242,13 +6242,13 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] in; 5] issue; 6] mm; 7] pa
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.origin.timestamp.musical-origin.tstamp2-origin.tstamp2_requires_origin.tstamp-constraint-rule-27">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="mei:*[@origin.tstamp2]">
-                <sch:assert test="@origin.tstamp">When @origin.tstamp2 is used @origin.tstamp must
+         <sch:assert test="@origin.tstamp">When @origin.tstamp2 is used @origin.tstamp must
                   also be present.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.ornam.attributes">
       <ref name="att.ornam.attribute.ornam"/>
@@ -6611,16 +6611,16 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] in; 5] issue; 6] mm; 7] pa
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.plist-plist-check_plistTarget-constraint-rule-28">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@plist">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@plist attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@plist attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">Each value in @plist should correspond to the @xml:id attribute of an
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.pointing.attributes">
       <ref name="att.pointing.attribute.xlinkactuate"/>
@@ -6834,16 +6834,16 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] in; 5] issue; 6] mm; 7] pa
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.responsibility-resp-check_respTarget-constraint-rule-29">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@resp">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@resp attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@resp attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*[ancestor::mei:meiHead]/@xml:id">The value in @resp should correspond to the @xml:id attribute of an element
                   within the metadata header.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.rest.anl.attributes">
       <ref name="att.common.anl.attributes"/>
@@ -7174,16 +7174,16 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] in; 5] issue; 6] mm; 7] pa
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.source-source-check_sourceTarget-constraint-rule-30">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@source">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@source attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@source attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:source/@xml:id">Each value in @source should correspond to the @xml:id attribute of a source
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.space.anl.attributes">
       <ref name="att.common.anl.attributes"/>
@@ -7277,16 +7277,16 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] in; 5] issue; 6] mm; 7] pa
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.staff.log-def-check_defTarget_staff-constraint-rule-31">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="mei:staff/@def">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@def attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@def attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:staffDef/@xml:id">The value in @def should correspond to the @xml:id attribute of a staffDef
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.staff.vis.attributes">
       <ref name="att.visibility.attributes"/>
@@ -7522,16 +7522,16 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] in; 5] issue; 6] mm; 7] pa
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.startendid-endid-check_endidTarget-constraint-rule-32">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@endid">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@endid attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@endid attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">The value in @endid should correspond to the @xml:id attribute of an
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.startid.attributes">
       <ref name="att.startid.attribute.startid"/>
@@ -7547,16 +7547,16 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] in; 5] issue; 6] mm; 7] pa
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.startid-startid-check_startidTarget-constraint-rule-33">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="@startid">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@startid attribute
+         <sch:assert role="warning" test="not(normalize-space(.) eq '')">@startid attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:*/@xml:id">The value in @startid should correspond to the @xml:id attribute of an
                   element.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.stems.attributes">
       <ref name="att.stems.cmn.attributes"/>
@@ -8179,13 +8179,13 @@ Suggested values include: 1] byte; 2] char; 3] cm; 4] in; 5] issue; 6] mm; 7] pa
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="mei-att.typed-subtype-When_subtype-constraint-rule-34">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                 context="mei:*[@subtype]">
-                <sch:assert test="@type">An element with a subtype attribute must have a type
+         <sch:assert test="@type">An element with a subtype attribute must have a type
                   attribute.</sch:assert>
-              </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="att.typography.attributes">
       <ref name="att.typography.attribute.fontfam"/>
@@ -11633,9 +11633,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-annot-annot_content_constraint-constraint-rule-35">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:annot[mei:head or mei:lg or mei:p or mei:quote or mei:table]">
                <sch:assert test="not(mei:head[preceding-sibling::*[not(local-name()='head')]])">Head
               elements can only occur at the start of annot.</sch:assert>
@@ -11811,9 +11811,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-avFile-avFile_child_of_clip-constraint-rule-36">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:clip/mei:avFile">
                <sch:assert test="count(mei:*) = 0">An avFile child of clip cannot have
               children.</sch:assert>
@@ -11853,9 +11853,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-barLine-Check_barLinetaktplace-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:barLine[@taktplace]">
                <sch:let name="staff" value="ancestor::mei:staff/@n"/>
                <sch:let name="staffpos"
@@ -11899,9 +11899,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-beam-When_not_copyof_beam_content-constraint-rule-38">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:beam[not(@copyof)]">
                <sch:assert test="count(descendant::*[local-name()='note' or local-name()='rest' or               local-name()='chord' or local-name()='space']) &gt; 1">A beam without a copyof attribute must have at least 2 note, rest, chord, or space
               descendants.</sch:assert>
@@ -11923,9 +11923,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-beamSpan-beamspan_start-_and_end-type_attributes_required-constraint-rule-39">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:beamSpan">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -11965,9 +11965,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-bend-bend_start-_and_end-type_attributes_required-constraint-rule-40">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:bend">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -12086,9 +12086,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-breath-breath_start-type_attributes_required-constraint-rule-41">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:breath">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -12280,9 +12280,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-change-change_requirements-constraint-rule-42">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:change">
                <sch:assert test="@isodate or mei:date">The date of the change must be recorded in an
               isodate attribute or date element.</sch:assert>
@@ -12439,9 +12439,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-clef-Clef_position_lines-constraint-rule-43">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:clef[ancestor::mei:staffDef[@lines]]">
                <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
                <sch:assert test="number(@line) &lt;= number(ancestor::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)">The clef position must be less than or equal to the number of lines of an ancestor
@@ -12451,9 +12451,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-clef-Clef_position_nolines-constraint-rule-44">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:clef[ancestor::mei:staffDef[not(@lines)]]">
                <sch:let name="thisstaff" value="ancestor::mei:staffDef/@n"/>
                <sch:assert test="number(@line) &lt;= number(preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)">The clef position must be less than or equal to the number of lines of a preceding
@@ -12498,9 +12498,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-clip-betype_required_when_begin_or_end-constraint-rule-45">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:clip[@begin or @end]">
                <sch:assert role="warning" test="@betype or ancestor::mei:*[@betype]">When @begin or
               @end is used, @betype should appear on clip or one of its ancestors.</sch:assert>
@@ -12537,9 +12537,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-componentGrp-checkComponentGrp-constraint-rule-46">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:componentGrp">
                <sch:assert test="every $i in ./child::mei:*[not(local-name()='head')] satisfies $i/local-name() eq ./parent::mei:*/local-name()">Only child elements of the same name as the parent of the componentGrp are
               allowed.</sch:assert>
@@ -12754,9 +12754,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-cpMark-cpMark_start-_and_end-type_attributes_required-constraint-rule-47">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:cpMark">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real</sch:assert>
@@ -12809,9 +12809,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-curve-symbolDef_curve_attributes_required-constraint-rule-48">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:curve[ancestor::mei:symbolDef]">
                <sch:assert test="@startid or (@x and @y)">In the symbolDef context, curve must have
               either a startid attribute or x and y attributes.</sch:assert>
@@ -13020,9 +13020,9 @@ Suggested values include: 1] interline; 2] intraline; 3] overstrike</a:documenta
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-dir-dir_start-type_attributes_required-constraint-rule-49">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:dir[not(ancestor::mei:syllable)]">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -13169,9 +13169,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-dynam-dynam_start-type_attributes_required-constraint-rule-50">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:dynam">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real"> Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -13180,9 +13180,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-dynam-dynam_end-type_attributes-constraint-rule-51">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:dynam[@val2]">
                <sch:assert test="@dur or @dur.ges or @endid or @tstamp2">When @val2 is present, either
               @dur, @dur.ges, @endid, or @tstamp2 must also be present.</sch:assert>
@@ -13642,9 +13642,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-fermata-fermata_start-type_attributes_required-constraint-rule-52">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:fermata">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -13690,9 +13690,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-figDesc-figDesc_content_constraint-constraint-rule-53">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:figDesc[mei:lg or mei:p or mei:quote or mei:table]">
                <sch:assert test="not(*[../text()[normalize-space()]])">Mixed content is not allowed
               when lg, p, quote, or table is used.</sch:assert>
@@ -13754,9 +13754,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-fing-stack_exclusion-constraint-rule-54">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:fing">
                <sch:assert test="not(descendant::mei:stack)">The stack element is not allowed as a
               descendant of fing.</sch:assert>
@@ -13795,28 +13795,28 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-fingGrp-require_fingeringLike_children-constraint-rule-55">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:fingGrp">
                <sch:assert test="count(mei:fing) + count(mei:fingGrp) &gt; 1">At least 2 fing or
               fingGrp elements are required.</sch:assert>
             </sch:rule>
          </pattern>
          <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
             <sch:rule context="mei:fingGrp[not(ancestor::mei:fingGrp)][@tstamp or @startid]">
-              <sch:assert test="not(child::mei:*[@tstamp or @startid])">When @tstamp or @startid is
+               <sch:assert test="not(child::mei:*[@tstamp or @startid])">When @tstamp or @startid is
                 present on fingGrp, its child elements cannot have a @tstamp or @startid
                 attribute.</sch:assert>
             </sch:rule>
             <sch:rule context="mei:fingGrp[not(ancestor::mei:fingGrp)][not(@tstamp or @startid)]">
-              <sch:assert test="count(descendant::mei:*[@tstamp or @startid]) = count(child::mei:*[local-name()='fing' or local-name()='fingGrp'])">When @tstamp or @startid is not present on fingGrp, each of its child elements must
+               <sch:assert test="count(descendant::mei:*[@tstamp or @startid]) = count(child::mei:*[local-name()='fing' or local-name()='fingGrp'])">When @tstamp or @startid is not present on fingGrp, each of its child elements must
                 have a @tstamp or @startid attribute.</sch:assert>
             </sch:rule>
-          </sch:pattern>
+         </sch:pattern>
          <ref name="att.common.attributes"/>
          <ref name="att.facsimile.attributes"/>
          <ref name="att.fingGrp.anl.attributes"/>
@@ -14014,9 +14014,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-gliss-gliss_start-_and_end-type_attributes_required-constraint-rule-58">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:gliss">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -14043,25 +14043,25 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-graphic-graphic_attributes-constraint-rule-59">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:zone/mei:graphic">
                <sch:assert role="warning" test="count(mei:*) = 0">Graphic child of zone should not have
               children.</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:symbolDef/mei:graphic">
                <sch:assert role="warning" test="@startid or (@ulx and @uly)">Graphic should have either
               a startid attribute or ulx and uly attributes.</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:graphic[not(ancestor::mei:symbolDef or ancestor::mei:zone)]">
                <sch:assert role="warning" test="not(@ulx or @uly)">Graphic should not have @ulx or @uly
               attributes.</sch:assert>
@@ -14121,9 +14121,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-grpSym-check_grpSym_attributes_scoreDef-constraint-rule-62">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:grpSym[parent::mei:scoreDef]">
                <sch:assert test="@startid and @endid and @level">In scoreDef, grpSym must have startid,
               endid, and level attributes.</sch:assert>
@@ -14132,9 +14132,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-grpSym-check_grpSym_attributes_staffDef-constraint-rule-63">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:grpSym[parent::mei:staffGrp]">
                <sch:assert test="not(@startid or @endid or @level)">In staffGrp, grpSym must not have
               startid, endid, or level attributes.</sch:assert>
@@ -14156,9 +14156,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-hairpin-hairpin_start-_and_end-type_attributes_required-constraint-rule-64">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:hairpin">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -14253,16 +14253,16 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-handShift-new-check_newTarget-constraint-rule-65">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="@new">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@new attribute
+               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@new attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+               <sch:assert role="warning"
                            test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:hand/@xml:id">The value in @new should correspond to the @xml:id attribute of a hand
                   element.</sch:assert>
-              </sch:rule>
+            </sch:rule>
          </pattern>
          <optional>
             <attribute name="old">
@@ -14273,16 +14273,16 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-handShift-old-check_oldTarget-constraint-rule-66">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="@old">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@old attribute
+               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@old attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+               <sch:assert role="warning"
                            test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:hand/@xml:id">The value in @old should correspond to the @xml:id attribute of a hand
                   element.</sch:assert>
-              </sch:rule>
+            </sch:rule>
          </pattern>
          <empty/>
       </element>
@@ -14303,9 +14303,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-harm-harm_start-type_attributes_required-constraint-rule-67">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:harm">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -14328,9 +14328,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-harpPedal-harpPedal_start-type_attributes_required-constraint-rule-68">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:harpPedal">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -14500,9 +14500,9 @@ Suggested values include: 1] abstract; 2] ack; 3] appendix; 4] bibliography; 5] 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-incipCode-Check_incipCode_form_mimetype-constraint-rule-69">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:incipCode">
                <sch:assert test="@form or @mimetype">incipCode must have a form or mimetype
               attribute.</sch:assert>
@@ -14694,9 +14694,9 @@ Suggested values include: 1] plaineAndEasie; 2] humdrumKern; 3] parsons</a:docum
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-keyAccid-Check_keyAccidPlacement-constraint-rule-70">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:keyAccid">
                <sch:assert test="(@x and @y) or (@pname and @oct) or @loc">One of the following is
               required: @x and @y attribute pair, @pname and @oct attribute pair, or @loc
@@ -15001,9 +15001,9 @@ Suggested values include: 1] plaineAndEasie; 2] humdrumKern; 3] parsons</a:docum
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-line-line_start-_and_end-type_attributes_required-constraint-rule-71">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:line[ancestor::mei:symbolDef]">
                <sch:assert test="@startid or (@x and @y)">When used in the symbolDef context, must have
               either a startid attribute or x and y attributes.</sch:assert>
@@ -15011,9 +15011,9 @@ Suggested values include: 1] plaineAndEasie; 2] humdrumKern; 3] parsons</a:docum
               either an endid attribute or both x2 and y2 attributes.</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:line[not(ancestor::mei:symbolDef)]">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real or (@x and @y)">When used in the score context, must have a startid, tstamp, tstamp.ges or
               tstamp.real attribute or both x and y attributes.</sch:assert>
@@ -15047,9 +15047,9 @@ Suggested values include: 1] plaineAndEasie; 2] humdrumKern; 3] parsons</a:docum
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-list-list_type_constraint-constraint-rule-73">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:list[@type='gloss']">
                <sch:assert test="count(mei:label) = count(mei:li)">In a list of type "gloss" all items
               must be immediately preceded by a label.</sch:assert>
@@ -15201,9 +15201,9 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-mei-Check_staff-constraint-rule-74">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:*[@staff]">
                <sch:assert test="every $i in tokenize(@staff, '\s+') satisfies $i=//mei:staffDef/@n">The values in @staff must correspond to @n attribute of a staffDef
               element.</sch:assert>
@@ -15361,9 +15361,9 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-mordent-mordent_start-type_attributes_required-constraint-rule-75">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:mordent">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -15484,9 +15484,9 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-name-nameParts-constraint-rule-76">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:name">
                <sch:assert role="warning" test="not(mei:geogName or mei:persName or mei:corpName)">Recommended practice is to use name elements to capture sub-parts of a generic
               name.</sch:assert>
@@ -15658,9 +15658,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-octave-octave_start-_and_end-type_attributes_required-constraint-rule-77">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:octave">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -15725,9 +15725,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-ornam-ornam_start-type_attributes_required-constraint-rule-78">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:ornam">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -15761,18 +15761,18 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </group>
          </choice>
          <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
             <sch:rule context="mei:measure/mei:ossia">
-              <sch:assert test="count(mei:*) = count(mei:staff)">In a measure, ossia may only
+               <sch:assert test="count(mei:*) = count(mei:staff)">In a measure, ossia may only
                 contain staff elements.</sch:assert>
             </sch:rule>
             <sch:rule context="mei:staff/mei:ossia">
-              <sch:assert test="count(mei:*) = count(mei:layer)">In a staff, ossia may only contain
+               <sch:assert test="count(mei:*) = count(mei:layer)">In a staff, ossia may only contain
                 layer elements.</sch:assert>
             </sch:rule>
-          </sch:pattern>
+         </sch:pattern>
          <ref name="att.common.attributes"/>
          <ref name="att.facsimile.attributes"/>
          <ref name="att.ossia.log.attributes"/>
@@ -15890,9 +15890,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-pedal-pedal_start-type_attributes_required-constraint-rule-81">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:pedal">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -16204,9 +16204,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-phrase-phrase_start-_and_end-type_attributes_required-constraint-rule-82">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:phrase">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -16217,9 +16217,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-phrase-phrase_containing_curve-constraint-rule-83">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:phrase[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or              @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2]]">
                <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or @endho or                @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)"
                            role="warning">The visual attributes of the phrase (@bezier, @bulge, @curvedir,
@@ -16617,9 +16617,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-recording-betype_required_when_begin_or_end-constraint-rule-84">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:recording[@begin or @end]">
                <sch:assert role="warning" test="@betype">When @begin or @end is used, @betype should be
               present.</sch:assert>
@@ -16893,9 +16893,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-respStmt-check_respStmt-constraint-rule-85">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:*[local-name()='titleStmt' or local-name()='pubStmt' or local-name()='seriesStmt']/mei:respStmt">
                <sch:assert role="warning" test="mei:resp or (count(mei:*[@role]) = count(mei:*))">If at
               least one resp element isn't present, all name-like elements should have a @role
@@ -16922,9 +16922,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-rest-Check_restline-constraint-rule-86">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:rest[@line]">
                <sch:let name="thisstaff" value="ancestor::mei:staff/@n"/>
                <sch:assert test="number(@line) &lt;= number(preceding::mei:staffDef[@n=$thisstaff and @lines][1]/@lines)">The value of @line must be less than or equal to the number of lines on the
@@ -17174,9 +17174,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-section-Check_sectionexpansion-constraint-rule-87">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:section[mei:expansion]">
                <sch:assert test="descendant::mei:section|descendant::mei:ending|descendant::mei:rdg">A
               section containing an expansion element must have descendant section, ending, or rdg
@@ -17331,9 +17331,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-slur-slur_start-_and_end-type_attributes_required-constraint-rule-88">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:slur">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -17344,9 +17344,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-slur-slur_containing_curve-constraint-rule-89">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:slur[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or              @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or @endvo or              @x or @y or @x2 or @y2]]">
                <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or                @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)"
                            role="warning">The visual attributes of the slur (@bezier, @bulge, @curvedir, @lform,
@@ -17576,9 +17576,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-staffDef-Check_staffDefn-constraint-rule-90">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:staffDef">
                <sch:let name="thisstaff" value="@n"/>
                <sch:assert test="@n">A staffDef must have an n attribute.</sch:assert>
@@ -17591,9 +17591,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-staffDef-Check_ancestor_staff-constraint-rule-91">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:staffDef[ancestor::mei:staff]">
                <sch:let name="thisstaff" value="@n"/>
                <sch:assert test="ancestor::mei:staff/@n eq $thisstaff">If a staffDef appears in a
@@ -17603,9 +17603,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-staffDef-Check_clef_position_staffDef-constraint-rule-92">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:staffDef[@clef.line and @lines]">
                <sch:assert test="number(@clef.line) &lt;= number(@lines)">The clef position must be
               less than or equal to the number of lines on the staff.</sch:assert>
@@ -17614,9 +17614,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-staffDef-Check_clef_position_staffDef_nolines-constraint-rule-93">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:staffDef[@clef.line and not(@lines)]">
                <sch:let name="thisstaff" value="@n"/>
                <sch:let name="stafflines"
@@ -17628,9 +17628,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-staffDef-Check_tab_strings_lines-constraint-rule-94">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:staffDef[@tab.strings and @lines]">
                <sch:let name="countTokens"
                         value="count(tokenize(normalize-space(@tab.strings), '\s'))"/>
@@ -17641,9 +17641,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-staffDef-Check_tab_strings_nolines-constraint-rule-95">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:staffDef[@tab.strings and not(@lines)]">
                <sch:let name="countTokens"
                         value="count(tokenize(normalize-space(@tab.strings), '\s'))"/>
@@ -17653,46 +17653,46 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
             </sch:rule>
          </pattern>
          <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
             <sch:rule context="mei:staffDef[@lines.color and @lines]">
-              <sch:let name="countTokens"
+               <sch:let name="countTokens"
                         value="count(tokenize(normalize-space(@lines.color), '\s'))"/>
-              <sch:assert test="$countTokens = 1 or $countTokens = @lines">The lines.color attribute
+               <sch:assert test="$countTokens = 1 or $countTokens = @lines">The lines.color attribute
                 must have either 1) a single value or 2) the same number of values as there are
                 staff lines.</sch:assert>
             </sch:rule>
             <sch:rule context="mei:staffDef[@lines.color and not(@lines)]">
-              <sch:let name="countTokens"
+               <sch:let name="countTokens"
                         value="count(tokenize(normalize-space(@lines.color), '\s'))"/>
-              <sch:let name="thisStaff" value="@n"/>
-              <sch:assert test="$countTokens = 1 or $countTokens = preceding::mei:staffDef[@n=$thisStaff and @lines][1]/@lines">The lines.color attribute must have either 1) a single value or 2) the same number
+               <sch:let name="thisStaff" value="@n"/>
+               <sch:assert test="$countTokens = 1 or $countTokens = preceding::mei:staffDef[@n=$thisStaff and @lines][1]/@lines">The lines.color attribute must have either 1) a single value or 2) the same number
                 of values as there are staff lines.</sch:assert>
             </sch:rule>
-          </sch:pattern>
+         </sch:pattern>
          <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
             <sch:rule context="mei:staffDef[@ppq][ancestor::mei:scoreDef[@ppq]]">
-              <sch:let name="staffPPQ" value="@ppq"/>
-              <sch:let name="scorePPQ" value="ancestor::mei:scoreDef[@ppq][1]/@ppq"/>
-              <sch:assert test="($scorePPQ mod $staffPPQ) = 0">The value of ppq must be a factor of
+               <sch:let name="staffPPQ" value="@ppq"/>
+               <sch:let name="scorePPQ" value="ancestor::mei:scoreDef[@ppq][1]/@ppq"/>
+               <sch:assert test="($scorePPQ mod $staffPPQ) = 0">The value of ppq must be a factor of
                 the value of ppq on an ancestor scoreDef.</sch:assert>
             </sch:rule>
-          </sch:pattern>
+         </sch:pattern>
          <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
             <sch:rule context="mei:staffDef[@ppq][preceding::mei:scoreDef[@ppq]]">
-              <sch:let name="staffPPQ" value="@ppq"/>
-              <sch:let name="scorePPQ" value="preceding::mei:scoreDef[@ppq][1]/@ppq"/>
-              <sch:assert test="($scorePPQ mod $staffPPQ) = 0">The value of ppq must be a factor of
+               <sch:let name="staffPPQ" value="@ppq"/>
+               <sch:let name="scorePPQ" value="preceding::mei:scoreDef[@ppq][1]/@ppq"/>
+               <sch:assert test="($scorePPQ mod $staffPPQ) = 0">The value of ppq must be a factor of
                 the value of ppq on a preceding scoreDef.</sch:assert>
             </sch:rule>
-          </sch:pattern>
+         </sch:pattern>
          <ref name="att.commonPart.attributes"/>
          <ref name="att.declaring.attributes"/>
          <ref name="att.staffDef.log.attributes"/>
@@ -17732,9 +17732,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-staffGrp-Check_staffGrp_unique_staff_n_values-constraint-rule-100">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:staffGrp">
                <sch:let name="countstaves" value="count(descendant::mei:staffDef)"/>
                <sch:let name="countuniqstaves"
@@ -17922,9 +17922,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-symbol-symbolDef_symbol_attributes_required-constraint-rule-101">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:symbol[ancestor::mei:symbolDef]">
                <sch:assert test="@startid or (@x and @y)">In the symbolDef context, symbol must have
               either a startid attribute or x and y attributes.</sch:assert>
@@ -18073,9 +18073,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-tempo-tempo_in_header_disallow_most_attrs-constraint-rule-102">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:tempo[ancestor::mei:meiHead]">
                <sch:assert test="not(@*[name() != 'label' and name() != 'n' and name() != 'xml:base' and name() != 'xml:id' and name() != 'xml:lang'])">Only label, n, xml:base, xml:id, and xml:lang attributes allowed when this element
               occurs in the header.</sch:assert>
@@ -18084,9 +18084,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-tempo-tempo_start-type_attributes_required-constraint-rule-103">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:tempo[not(ancestor::mei:syllable) and not(ancestor::mei:work) and not(ancestor::mei:expression) and not(count(ancestor::mei:*) = 0)]">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -18202,9 +18202,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-tie-tie_start-_and_end-type_attributes_required-constraint-rule-104">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:tie">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -18215,9 +18215,9 @@ Suggested values include: 1] person; 2] corporation; 3] location; 4] process; 5]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-tie-tie_containing_curve-constraint-rule-105">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:tie[mei:curve[@bezier or @bulge or @curvedir or @lform or @lwidth or              @ho or @startho or @endho or @to or @startto or @endto or @vo or @startvo or              @endvo or @x or @y or @x2 or @y2]]">
                <sch:assert test="not(@bezier or @bulge or @curvedir or @lform or @lwidth or @ho or @startho or                @endho or @to or @startto or @endto or @vo or @startvo or @endvo or @x or @y or @x2 or @y2)"
                            role="warning">The visual attributes of the tie (@bezier, @bulge, @curvedir, @lform,
@@ -18410,9 +18410,9 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-trill-trill_start-type_attributes_required-constraint-rule-106">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:trill">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -18453,9 +18453,9 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-tuplet-When_not_copyof_tuplet_content-constraint-rule-107">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:tuplet[not(@copyof)]">
                <sch:assert test="count(descendant::*[local-name()='note' or local-name()='rest' or               local-name()='chord']) &gt; 1">A tuplet without a copyof attribute must have at least 2 note, rest, or chord
               descendants.</sch:assert>
@@ -18477,9 +18477,9 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-tupletSpan-tupletSpan_start-_and_end-type_attributes_required-constraint-rule-108">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:tupletSpan">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -18504,9 +18504,9 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-turn-turn_start-type_attributes_required-constraint-rule-109">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:turn">
                <sch:assert test="@startid or @tstamp or @tstamp.ges or @tstamp.real">Must have one of
               the attributes: startid, tstamp, tstamp.ges or tstamp.real.</sch:assert>
@@ -18677,9 +18677,9 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-when-check_when_interval-constraint-rule-110">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:when[@interval]">
                <sch:assert role="warning" test="@since">@since should be present when @interval is
               used.</sch:assert>
@@ -18690,17 +18690,17 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
               used.</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:when[matches(@interval, '^[0-9]+$')]">
                <sch:assert test="not(@inttype eq 'time')">When @interval contains an integer value,
               @inttype cannot be 'time'.</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:when[matches(@interval, ':')]">
                <sch:assert test="@inttype eq 'time'">When @interval contains a time value, @inttype
               must be 'time'.</sch:assert>
@@ -18709,9 +18709,9 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-when-check_when_absolute-constraint-rule-113">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="mei:when[@absolute]">
                <sch:assert role="warning" test="@abstype or ancestor::mei:*[@betype]">When @absolute is
               present, @abstype should be present or @betype should be present on an
@@ -18732,7 +18732,7 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
                <choice>
                   <data type="decimal">
                      <param name="minInclusive">1</param>
-                  </data> 
+                  </data>
                   <data type="time"/>
                </choice>
             </attribute>
@@ -18758,16 +18758,16 @@ Suggested values include: 1] main; 2] subordinate; 3] abbreviated; 4] alternativ
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="mei-when-since-check_sinceTarget-constraint-rule-114">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                       context="@since">
-                <sch:assert role="warning" test="not(normalize-space(.) eq '')">@since attribute
+               <sch:assert role="warning" test="not(normalize-space(.) eq '')">@since attribute
                   should have content.</sch:assert>
-                <sch:assert role="warning"
+               <sch:assert role="warning"
                            test="every $i in tokenize(., '\s+') satisfies substring($i,2)=//mei:when/@xml:id">The value in @since should correspond to the @xml:id attribute of a when
                   element.</sch:assert>
-              </sch:rule>
+            </sch:rule>
          </pattern>
          <empty/>
       </element>
