@@ -50,7 +50,7 @@ public class MEICustomizationTest {
         String tempDir = "src/test/temp";
         customization.customize(null, sourceInputType, customizationInputType, outputFormat, os, null, null, tempDir);
         assertNotNull(new File("src/test/resources/test-output.rng"));
-        System.out.println(new String(Files.readAllBytes(Paths.get("src/test/resources/test-output.rng")), "UTF-8"));
+        //System.out.println(new String(Files.readAllBytes(Paths.get("src/test/resources/test-output.rng")), "UTF-8"));
         assertNotEquals("", new String(Files.readAllBytes(Paths.get("src/test/resources/test-output.rng")), "UTF-8"));
         //Always differs:
         // <!--
